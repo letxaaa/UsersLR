@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+</head>
+<body>
+    <div class="welcome_page_container">
+        <div id="welcome_page">
+            <div class="right">
+
+                <div class="title_container">
+                    <h1 class="title_exam top">WELCOME!!!!</h1>
+                    <h1 class="title_exam bottom">Become a user!</h1>
+                </div>
+                <h3><a href="/login">Login</a> or <a href="/register">Register</a></h3>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

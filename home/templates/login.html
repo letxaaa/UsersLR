@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static '/login' %}"></script>
+</head>
+<body>
+    <div class="welcome_page_container">
+        <div class="page_container">
+            <div class="display_flex">
+                <h1 class="ninja">Login</h1>
+            </div>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="errors">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="/login" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" class="form-control" id="password">
+                </div>
+                <button class="btn btn-danger">Login</button>
+            </form>
+            <div id="link_to_new_user">
+                <a class="btn btn-dark" href="/register" >Register new User</a>
+                <a class="btn btn-dark" href="/">Home</a>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static '/login' %}"></script>
+</head>
+<body>
+    <div class="welcome_page_container">
+        <div class="page_container">
+            <div class="display_flex">
+                <h1 class="ninja">Login</h1>
+            </div>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="errors">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="/login" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" class="form-control" id="password">
+                </div>
+                <button class="btn btn-danger">Login</button>
+            </form>
+            <div id="link_to_new_user">
+                <a class="btn btn-dark" href="/register" >Register new User</a>
+                <a class="btn btn-dark" href="/">Home</a>
+        </div>
+    </div>
+</body>
+</html>
